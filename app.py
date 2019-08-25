@@ -26,7 +26,7 @@ def recipe():
 def add_recipe():
     return render_template("addrecipe.html", categories=mongo.db.categories.find())
 
-@app.route('/utensils')
+@app.route('/get_utensils')
 def get_utensils():
     return render_template("utensils.html", recipes=mongo.db.recipe.find(), utensils=mongo.db.utensils.find())
 
@@ -50,7 +50,7 @@ def insert_recipe():
 def insert_utensils():
     utensils = mongo.db.utensils
     utensils.insert_one(request.form.to_dict())
-    return redirect(url_for('/utensils'))
+    return redirect(url_for('get_utensils'))
 
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
