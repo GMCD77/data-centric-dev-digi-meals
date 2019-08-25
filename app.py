@@ -44,7 +44,7 @@ def add_utensils():
 def insert_recipe():
     recipe = mongo.db.recipe
     recipe.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('recipe'))
 
 @app.route('/insert_utensils', methods=['POST'])
 def insert_utensils():

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
-    </head>
-    <body>
-        <header>
+
+<head>
+	<script src="https://kit.fontawesome.com/365377ca39.js">
+	</script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+</head>
+
+<body>
+	<header>
 
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="{{url_for('get_recipes')}}" class="brand-logo">
-          <img class="responsive-img" id="logo" src="{{url_for('static', filename='images/digi-meals-logo.png')}}"/>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="{{url_for('get_recipes')}}" class="brand-logo">
+					<img class="responsive-img" id="logo" src="{{url_for('static', filename='images/digi-meals-logo.png')}}"/>
           </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
@@ -21,14 +25,15 @@
 
         <li><a href="{{url_for('get_recipes')}}">HOME</a></li>
         <li><a href="{{url_for('get_utensils')}}">UTENSILS</a></li>
+        <li><a href="{{url_for('recipe')}}">RECIPE LIST</a></li>
         <li><a href="{{url_for('add_recipe')}}">ADD RECIPE</a></li>
         </ul>
 
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="{{url_for('get_recipes')}}">HOME</a></li>
+        <li><a href="{{url_for('get_utensils')}}">UTENSILS</a></li>
+        <li><a href="{{url_for('recipe')}}">RECIPE LIST</a></li>
+        <li><a href="{{url_for('add_recipe')}}">ADD RECIPE</a></li>
       </ul>
     </div>
   </nav>
@@ -76,16 +81,37 @@ function autoplay() {
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text">SEARCH</h5>
+                <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                <h5 class="white-text">Social</h5>
+                <ul class="social-links">
+                  <li class="social">
+                      <a target="_blank" href="#">
+                          <i class="fab fa-facebook-f"></i></a></li>
+                          <li class="social">
+                      <a target="_blank" href="#">
+                          <i class="fab fa-twitter"></i></a></li>
+                          <li class="social">
+                      <a target="_blank" href="#">
+                          <i class="fab fa-linkedin-in"></i></a></li>
+                          <li class="social">
+                      <a target="_blank" href="#">
+                          <i class="fab fa-pinterest-p"></i></a></li>
+                          <li class="social">
+                      <a target="_blank" href="#">
+                          <i class="fab fa-instagram"></i></a></li>
+                          <li class="social">
+                      <a target="_blank" href="#">
+                         <i class="fab fa-youtube"></i></a></li>
+
                 </ul>
               </div>
             </div>
