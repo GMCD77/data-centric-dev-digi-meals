@@ -1,12 +1,11 @@
-{% extends 'base.html'%}
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 <section class="black">
-  <div class="carousel carousel-slider" data-indicators="true">
-          {% for utensils in utensils %}
-    <div class="carousel-fixed-item">
-      <div class="container">
-          <h1 class="white-text">digi meals utensils</h1>
-          <h5><em>Ensuring Your Utensils Are As Good As Your Cooking</em></h5>
+	<div class="carousel carousel-slider" data-indicators="true">
+		{% for utensils in utensils %}
+		<div class="carousel-fixed-item">
+			<div class="container">
+				<h1 class="white-text">digi meals utensils</h1>
+				<h5><em>Ensuring Your Utensils Are As Good As Your Cooking</em></h5>
         <a class="btn waves-effect white grey-text darken-text-2" href="/utensils" target="_blank">See our Range</a>
       </div>
     </div>
@@ -20,12 +19,11 @@
     {% endfor %}
     </div>
 </section>
+<div id="container">
 
 <div class="row">
-      {% for recipe in recipes %}
-
-    <div class="col l3 m6">
-
+{% for recipe in recipes %}
+    <div class="col s12 m6">
       <div class="card">
         <div class="card-image size">
           <img src="{{recipe.image_link}}">
@@ -34,21 +32,15 @@
         </div>
         <div class="card-content">
           <p class="truncate flow-text">{{recipe.description}}</p>
-           <!--<div class="col s3">
-                   <a href ="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red">Delete Recipe</a>
-                    <a href ="{{url_for('edit_recipe', recipe_id=recipe._id)}}"class="waves-effect waves-light btn btn_small green">Edit</a>
-
-                </div>-->
-        </div>
-         <div class="card-action grey darken-3">
-             <i class="fas fa-thumbs-up fa-5x"></i>
+               <div class="card-action grey darken-3">
           <a class="teal-text" href="#">Will Work Soon</a>
         </div>
       </div>
     </div>
-
+</div>
      {% endfor %}
   </div>
+  </div>
 
-  {% endblock %}
 
+{% endblock %}
