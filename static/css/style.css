@@ -1,0 +1,41 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+     }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+h1 {
+    text-transform: uppercase;
+    background-color: rgba(69, 162, 158, 0.5);
+    text-align: center;
+}
+
+
+  nav {
+    background-color: #0b0c10;
+  }
+
+  nav .ul .a {
+    color: #45a29e;
+  }
+
+.carousel .carousel-item>img {
+    height: 500px;
+    object-fit: cover;
+
+}
+  .card {
+    background-color: #c5c6c7;
+  }
+
+  .card .card-image img {
+      height: 350px;
+      object-fit: cover;
+  }
+  .page-footer {
+    background-color: #0b0c10;
+  }
